@@ -1,0 +1,6 @@
+registeredDate: 1455569478863
+sessionId: 56c23a2f2ce98516be7215ab
+humanName: Biplab
+docid: com.weheartit
+phone: {"type":"PHYSICAL","serial":"ZX1G228FCS"}
+session: {"__v":0,"humanName":"Biplab","docid":"com.weheartit","state":"registered","sessionType":"exploring","_id":"56c23a2f2ce98516be7215ab","startDate":"2016-02-15T20:50:55.622Z"}

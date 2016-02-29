@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="bnc_session_id">227883427124793066</string>
+    <string name="bnc_link_click_identifier">bnc_no_value</string>
+    <string name="bnc_device_fingerprint_id">227523212051825080</string>
+    <string name="bnc_user_url">http://love.whrt.it/a/key_live_kjdTbXKTeqo2bSs985fLRcfgAwgm81ze?%24identity_id=227881818924289989</string>
+    <string name="bnc_app_version">4.7.0</string>
+    <string name="bnc_install_params">{&quot;+is_first_session&quot;:false,&quot;+clicked_branch_link&quot;:false}</string>
+    <int name="bnc_is_referrable" value="0" />
+    <string name="bnc_link_click_id">bnc_no_value</string>
+    <string name="bnc_identity_id">227881818924289989</string>
+    <string name="bnc_session_params">{&quot;+is_first_session&quot;:false,&quot;+clicked_branch_link&quot;:false}</string>
+</map>

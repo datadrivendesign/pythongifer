@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="accumulatedBackgroundTime">0</string>
+    <string name="previousGenesis">0</string>
+    <string name="accumulatedActiveUserSessionTime">0</string>
+    <string name="lastUserInteractionTimestamp">-1</string>
+    <string name="applicationSessionCountKey">0</string>
+    <string name="accumulatedApplicationSessionTime">265021</string>
+    <string name="lastActiveUserSessionTimestamp">-1</string>
+    <string name="accumulatedInactiveTime">105115</string>
+    <string name="CustomerC2">9875369</string>
+    <string name="currentVersion">4.7.0</string>
+    <string name="totalBackgroundTime">0</string>
+    <string name="userSessionCount">-1</string>
+    <string name="totalInactiveTime">179979</string>
+    <string name="PublisherSecret">c02dec492c085136eb9052cc7577b170</string>
+    <string name="q_dcc">2</string>
+    <string name="lastUserSessionTimestamp">-1</string>
+    <string name="genesis">1455569479781</string>
+    <string name="vid">3b6a826d0e8f287d687a68fa2bbb7848-cs31</string>
+    <string name="lastApplicationSessionTimestamp">1455569865904</string>
+    <string name="accumulatedForegroundTime">159907</string>
+    <string name="lastTransmission">1455569600970</string>
+    <string name="crossPublisherId">sllOpvnqJYZ/4QTFiIkrwzIv95MukwZvqiLksvNj+WyB5QCr7FbjC45jgmpwOaNcsgQ3W0Z5TriHNm4awdwPE+o4mMjZbXW29oYwh6e7XZ1Lb429FVXDMLdfEmLvpcWousznadlr2m6iCRAAawQD1VJNC4rS59fMUuUjYZzXAy8=</string>
+    <string name="runs">1</string>
+    <string name="lastApplicationAccumulationTimestamp">1455569865903</string>
+    <string name="installId">1455569479781</string>
+    <string name="activeUserSessionCount">-1</string>
+    <string name="accumulatedUserSessionTime">0</string>
+    <string name="appName">We Heart It</string>
+    <string name="coldStartCount">1</string>
+    <string name="q_dcf">1455569483027</string>
+    <string name="lastSessionAccumulationTimestamp">1455569865904</string>
+    <string name="userInteractionCount">0</string>
+    <string name="firstInstallId">1455569479781</string>
+    <string name="totalForegroundTime">202904</string>
+    <string name="foregroundTransitionsCount">8</string>
+</map>

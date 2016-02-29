@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <long name="last_dispatch" value="1455569488524" />
+    <long name="monitoring:start" value="1455569482702" />
+    <long name="first_run" value="1455569482715" />
+    <string name="monitoring:value">3WC7.8.95:AnalyticsService not registered in the app manifest. Hits might not be delivered reliably. See http://goo.gl/8Rd3yj for instructions.</string>
+    <long name="monitoring:count" value="4" />
+</map>
