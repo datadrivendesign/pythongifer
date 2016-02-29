@@ -1,5 +1,0 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-<map>
-    <boolean name="com.flurry.sdk.previous_successful_report" value="true" />
-    <long name="com.flurry.sdk.initial_run_time" value="1455569482037" />
-</map>
