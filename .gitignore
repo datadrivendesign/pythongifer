@@ -1,2 +1,3 @@
 gifs/*.gif
 res/
+.DS_Store
