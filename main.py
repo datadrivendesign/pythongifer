@@ -17,7 +17,8 @@ file_names = sorted(glob.glob('res/img/*.png'), key=numericalSort)
 
 # Read inputEvents.txt
 inputEvents = open('res/inputEvents.txt', 'r')
-events = inputEvents.readlines();
+events = inputEvents.readlines()
+inputEvents.close()
 frameBreaks = [0]
 
 # Regex pattern match
@@ -28,20 +29,19 @@ for e in events:
     elif not frame in frameBreaks:
         frameBreaks.append(frame)
 
-gifCount = 1
+
+gifCount = 0
 for x in range(len(frameBreaks)-1):
-    images = []
+    if (frameBreaks[x+1] - frameBreaks[x]) > 10 && (frameBreaks[x+1] - frameBreaks[x]) < 256:
+        images = []
+        for y in range(frameBreaks[x], frameBreaks[x+1]):
+            images.append(Image.open(file_names[y]))
 
-    for y in range(frameBreaks[x], frameBreaks[x+1]):
-        images.append(Image.open(file_names[y]));
-
-    size = (600,350)
-    for im in images:
-        im.thumbnail(size, Image.ANTIALIAS)
-    filename = "sequence" + str(gifCount) + ".gif"
-    writeGif("gifs/" + filename, images, duration=0.1)
-    for y in images:
-        y.close()
-    gifCount += 1
-
-inputEvents.close()
+        size = (600,350)
+        for im in images:
+            im.thumbnail(size, Image.ANTIALIAS)
+        filename = "sequence" + str(gifCount) + ".gif"
+        writeGif("gifs/" + filename, images, duration=0.1)
+        for i in images:
+            i.close()
+        gifCount += 1
