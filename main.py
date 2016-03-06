@@ -29,19 +29,31 @@ for e in events:
     elif not frame in frameBreaks:
         frameBreaks.append(frame)
 
+# Remove all old files
+files = glob.glob('gifs/*')
+for f in files:
+    os.remove(f)
+
+# Modify to change properties of GIFs
+frameSkip = 3
+durationVal = 0.2
+length = 600
+width = 350
 
 gifCount = 0
+
 for x in range(len(frameBreaks)-1):
-    if (frameBreaks[x+1] - frameBreaks[x]) > 10 && (frameBreaks[x+1] - frameBreaks[x]) < 256:
+
+    if (frameBreaks[x+1] - frameBreaks[x]) > 10:
         images = []
-        for y in range(frameBreaks[x], frameBreaks[x+1]):
+        for y in range(frameBreaks[x], frameBreaks[x+1], frameSkip):
             images.append(Image.open(file_names[y]))
 
-        size = (600,350)
+        size = (length,width)
         for im in images:
             im.thumbnail(size, Image.ANTIALIAS)
         filename = "sequence" + str(gifCount) + ".gif"
-        writeGif("gifs/" + filename, images, duration=0.1)
+        writeGif("gifs/" + filename, images, duration=durationVal)
         for i in images:
             i.close()
         gifCount += 1
