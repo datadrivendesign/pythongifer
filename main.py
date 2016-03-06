@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from images2gif import writeGif
-from PIL import Image
+from PIL import Image, ImageDraw
 import os
 import glob
 import re
@@ -20,14 +20,18 @@ inputEvents = open('res/inputEvents.txt', 'r')
 events = inputEvents.readlines()
 inputEvents.close()
 frameBreaks = [0]
+eventCoords = []
 
 # Regex pattern match
 for e in events:
     frame = int(re.search('imgCount:([0-9]+)', e).group(1))
-    if not frameBreaks:
+    x = re.search('x:(\d+\.\d+)', e)
+    y = re.search('y:(\d+\.\d+)', e)
+    if not frame in frameBreaks:
         frameBreaks.append(frame)
-    elif not frame in frameBreaks:
-        frameBreaks.append(frame)
+    if x is not None and y is not None:
+        eventCoords.append( ( float(x.group(1)) , float(y.group(1)) ) )
+
 
 # Remove all old files
 files = glob.glob('gifs/*')
@@ -39,6 +43,7 @@ frameSkip = 3
 durationVal = 0.2
 length = 600
 width = 350
+#circle = (0, 0, 40, 40)
 
 gifCount = 0
 
@@ -52,6 +57,13 @@ for x in range(len(frameBreaks)-1):
         size = (length,width)
         for im in images:
             im.thumbnail(size, Image.ANTIALIAS)
+
+        for i in (0,3):
+            draw = ImageDraw.Draw(images[i])
+            circle = (eventCoords[i][0], eventCoords[i][1], 40, 40)
+            draw.ellipse(circle, fill='blue')
+            del draw
+
         filename = "sequence" + str(gifCount) + ".gif"
         writeGif("gifs/" + filename, images, duration=durationVal)
         for i in images:
